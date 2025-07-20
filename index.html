@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Academi Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="fixedHeader">Cyber Academi</div>
+  <div id="app">
+    <div id="loginScreen" class="screen">
+      <h2>Masuk Sekolah</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Masuk</button>
+    </div>
+    <div id="dashboard" class="screen hidden">
+      <h2>Selamat Datang, <span id="namaUser"></span> 👑</h2>
+      <div class="kelas-slider">
+        <div class="kelas-item" onclick="bukaKelas('Banned WhatsApp')">BELAJAR BANNED WHATSAPP</div>
+        <div class="kelas-item" onclick="bukaKelas('Nokos')">BELAJAR MENDAPATKAN NOKOS</div>
+        <div class="kelas-item" onclick="bukaKelas('Unbanned WhatsApp')">BELAJAR CARA UNBANNED WHATSAPP</div>
+        <div class="kelas-item" onclick="bukaKelas('Cyber Security')">BELAJAR CYBER SECURITY</div>
+      </div>
+    </div>
+    <div id="quizScreen" class="screen hidden">
+      <h2 id="judulKelas"></h2>
+      <div id="pertanyaanBox">
+        <p id="pertanyaanTeks"></p>
+        <div id="opsiJawaban"></div>
+      </div>
+    </div>
+    <div id="hasilScreen" class="screen hidden">
+      <div id="sertifikat">
+        <h1>🏆 Yano Belajar Online</h1>
+        <p>📛 Nama: <span id="certNama"></span></p>
+        <p>🆔 ID: <span id="certId"></span></p>
+        <p>📈 Nilai: <span id="certNilai"></span>/100</p>
+        <p>📜 Status: <span id="certStatus"></span></p>
+        <p>👑 Role: Developer👑</p>
+        <p>📅 Tanggal: <span id="certTanggal"></span></p>
+        <button onclick="downloadSertifikat()">🖼️ Download Sertifikat Sekarang</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>Syarat dan Privasi Kami | Ketentuan Layanan | Hubungi Customer Service | Privacy | Layanan | Chanel Telegram</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
